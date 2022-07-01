@@ -1,28 +1,13 @@
 package main
 
-import (
-	"fmt"
-	"strconv"
-)
+import "fmt"
 
 func main() {
-	fmt.Println(f([]MyStr{"1", "2", "3", "4"}))
-}
+	fmt.Println(f([]MyInt{1, 2, 3, 4}))
 
-func f[T Integers](xs []T) []int {
-	var result []int
-	for _, x := range xs {
-		result = append(result, x.Integer())
-	}
-	return result
-}
-
-type Integers interface {
-	Integer() int
-}
-
-type MyStr string
-
-func (i MyStr) Integer() (int, error) {
-	return strconv.Atoi(string(i))
+	s := New[string]()
+	s.Push("hello")
+	s.Push("world")
+	fmt.Println(s.Pop()) // world
+	fmt.Println(s.Pop()) // hello
 }

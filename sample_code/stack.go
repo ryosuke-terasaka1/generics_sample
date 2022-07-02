@@ -1,4 +1,4 @@
-package main
+package sample_code
 
 type Stack[T any] []T
 

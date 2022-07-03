@@ -12,4 +12,5 @@ func main() {
 	float_slice := []float64{1.2, 2.3, 3.0, 4.9, 5.1}
 	float_av := test_code.Average(float_slice)
 	fmt.Printf("float_cal=%v\n", float_av)
+
 }
